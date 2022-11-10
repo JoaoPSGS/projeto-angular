@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'new-user',
     loadChildren: () => import('./pages/new-user/new-user.module').then( m => m.NewUserPageModule)
   },
+  {
+    path: 'editar-cadastro',
+    loadChildren: () => import('./pages/editar-cadastro/editar-cadastro.module').then( m => m.EditarCadastroPageModule)
+  },
 ];
 
 @NgModule({

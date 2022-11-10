@@ -22,20 +22,20 @@ export class MeuStorageService {
     });
   }
 
-  GetUsuarios(){
-    return this.storage.get(this.key_usuarios).then(usuarios => {
+  GetUsuarios(key: any){
+    return this.storage.get(key).then(usuarios => {
       return Promise.resolve(usuarios);
     });
   }
 
-  SalvarTodosUsuarios(usuarios: any){
-    return this.storage.set(this.key_usuarios, usuarios).then(() => {
+  SalvarTodosUsuarios(key: any, usuarios: any){
+    return this.storage.set(key, usuarios).then(() => {
       return Promise.resolve();
     });
   }
 
-  SalvarUsuario(usuario:any){
-    return this.GetUsuarios().then(usuarios =>{
+  SalvarUsuario(key: any, usuario:any){
+    return this.GetUsuarios(key).then(usuarios =>{
       
       switch(usuario.acao)
       {
@@ -66,7 +66,7 @@ export class MeuStorageService {
           break;
       }
 
-      this.SalvarTodosUsuarios(usuarios);
+      this.SalvarTodosUsuarios(key, usuarios);
 
       return Promise.resolve();
     });

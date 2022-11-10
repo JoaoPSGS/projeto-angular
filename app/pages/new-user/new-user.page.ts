@@ -11,13 +11,13 @@ export class NewUserPage implements OnInit {
   passwordToggleIcon = 'eye' ;
   showPassword       = false;
   
-  Usuario: any;
+  Usuario        : any;
   listaDeUsuarios: Array<any>;
-  titulo : string;
-  json_dados: string;
+  titulo         : string;
+  json_dados     : string;
 
-  constructor(private mensagens: AlertController,
-              private navegar: NavController,
+  constructor(private mensagens : AlertController,
+              private navegar   : NavController,
               private meustorage: MeuStorageService) {
                 
                 this.titulo = "inclusao";
@@ -32,7 +32,7 @@ export class NewUserPage implements OnInit {
                }
 
   ionViewDidEnter(){
-    this.meustorage.GetUsuarios().then(usuarios => {
+    this.meustorage.GetUsuarios("usuarios").then(usuarios => {
       this.listaDeUsuarios = usuarios;
     });
   }
@@ -68,7 +68,7 @@ export class NewUserPage implements OnInit {
     }else {
       this.Usuario.id = this.listaDeUsuarios.length + 1;
     }
-    this.meustorage.SalvarUsuario(this.Usuario).then(() => {
+    this.meustorage.SalvarUsuario("usuarios", this.Usuario).then(() => {
       this.navegar.pop();
     });
 
