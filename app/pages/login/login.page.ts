@@ -53,9 +53,8 @@ export class LoginPage implements OnInit {
   btn_entrar(){
     for(let i = 0; i < this.listaDeUsuarios.length; i++){
       if(this.login == this.listaDeUsuarios[i].login && this.senha == this.listaDeUsuarios[i].senha){
-        // mudar criação do json na mão
-        let string_usuario = `[{"login":"`+this.login+`","senha":"`+this.senha+`","id":"`+this.listaDeUsuarios[i].id+`"}]`
-        this.Usuario = JSON.parse(string_usuario);
+        
+        this.Usuario = this.listaDeUsuarios[i];
         
         this.navegar.navigateForward("/home");
         this.presentAlert("Bem Vindo(a) "+this.login);

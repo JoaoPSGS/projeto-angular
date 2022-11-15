@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'editar-cadastro',
     loadChildren: () => import('./pages/editar-cadastro/editar-cadastro.module').then( m => m.EditarCadastroPageModule)
   },
+  {
+    path: 'criando-projeto',
+    loadChildren: () => import('./pages/criando-projeto/criando-projeto.module').then( m => m.CriandoProjetoPageModule)
+  },
 ];
 
 @NgModule({

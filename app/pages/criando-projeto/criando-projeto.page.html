@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Criando Projeto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true" style="height: 100%;">
+    
+    <ion-slide>
+      <ion-title style="padding-bottom: 400px; font-size: 25px;">VSCode e Node</ion-title>
+     
+        <ion-img (click)="site_vscode()" src="../../../assets/icon/logo-vscode.png"></ion-img>
+        <ion-img (click)="site_node()" src="../../../assets/icon/node.png"></ion-img>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-title style="padding-bottom: 450px; font-size: 25px;">Extensões VSCode</ion-title>
+      <ion-title class="ion-text-start" style="padding-bottom: 350px;">- Ionic</ion-title>
+      <ion-title class="ion-text-start" style="padding-bottom: 300px;">- Ionic Extension Pack</ion-title>
+      <ion-title class="ion-text-start" style="padding-bottom: 250px;">- Angular Language Service</ion-title>
+
+      <ion-img style="width: 150px; " src="../../../assets/icon/favicon.png"></ion-img>
+      <ion-img style="width: 190px;" src="../../../assets/icon/Angular.png"></ion-img>
+      
+    </ion-slide>
+
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
