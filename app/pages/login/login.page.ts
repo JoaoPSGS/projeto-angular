@@ -51,7 +51,15 @@ export class LoginPage implements OnInit {
   }
 
   btn_entrar(){
-    for(let i = 0; i < this.listaDeUsuarios.length; i++){
+    // validação simples de admin sem usar storage - (demonstração)
+    if(this.login == "admin" && this.senha == "admin"){
+      this.navegar.navigateForward("/home-adm");
+      this.presentAlert("Bem Vindo(a) "+this.login);
+      this.storage.set("usuario_logado", this.Usuario);
+      return;
+    }
+
+    for(let i = 0; i < this.listaDeUsuarios?.length; i++){
       if(this.login == this.listaDeUsuarios[i].login && this.senha == this.listaDeUsuarios[i].senha){
         
         this.Usuario = this.listaDeUsuarios[i];

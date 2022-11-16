@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-criando-projeto',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriandoProjetoPage implements OnInit {
 
-  constructor() { }
+  constructor(private navegar   : NavController) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,10 @@ export class CriandoProjetoPage implements OnInit {
 
   site_node(){
     window.location.href = "https://nodejs.org/en/download/";
+  }
+
+  voltar(){
+    this.navegar.pop();
   }
 
 }

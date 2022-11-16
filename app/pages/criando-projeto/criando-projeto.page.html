@@ -12,10 +12,15 @@
   <ion-slides pager="true" style="height: 100%;">
     
     <ion-slide>
-      <ion-title style="padding-bottom: 400px; font-size: 25px;">VSCode e Node</ion-title>
-     
-        <ion-img (click)="site_vscode()" src="../../../assets/icon/logo-vscode.png"></ion-img>
-        <ion-img (click)="site_node()" src="../../../assets/icon/node.png"></ion-img>
+      <div>
+        <h1>VSCode</h1>
+        <ion-img class="ion-text-center" (click)="site_vscode()" style="padding-top: 20%;"  src="../../../assets/icon/logo-vscode.png"></ion-img>
+      </div>
+
+      <div>
+        <h1>Node</h1>
+        <ion-img (click)="site_node()" style="width: 110%; padding-top: 20%;"  src="../../../assets/icon/node.png"></ion-img>
+     </div>
 
     </ion-slide>
 
@@ -31,7 +36,12 @@
     </ion-slide>
 
     <ion-slide>
-      <h1>Slide 3</h1>
+      <ion-title style="padding-bottom: 400px; font-size: 25px;">No CMD:</ion-title>
+      <ion-title style="padding-bottom: 350px; font-size: 18px;">1. npm install -g @ionic/cli</ion-title>
+      <ion-title style="padding-bottom: 250px; font-size: 25px;">No Menu Ionic:</ion-title>
+      <ion-title style="padding-bottom: 200px; font-size: 18px;">1. New Project Angular</ion-title>
+      <ion-title style="padding-bottom: 150px; font-size: 18px;">2. Blank</ion-title>
+      <ion-button (click)="voltar()" size="large" style="margin-top: 200px;">Voltar</ion-button>
     </ion-slide>
 
   </ion-slides>

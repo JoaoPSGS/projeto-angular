@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'criando-projeto',
     loadChildren: () => import('./pages/criando-projeto/criando-projeto.module').then( m => m.CriandoProjetoPageModule)
   },
+  {
+    path: 'home-adm',
+    loadChildren: () => import('./pages/home-adm/home-adm.module').then( m => m.HomeAdmPageModule)
+  },
 ];
 
 @NgModule({
