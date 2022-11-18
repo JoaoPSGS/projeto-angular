@@ -12,10 +12,6 @@ export class MeuStorageService {
     
   }
 
-  // SetId(){
-  //   this.storage.set("indice-id", 1);
-  // }
-
   GetId(){
     return this.storage.get("indice-id").then(id => {
       return Promise.resolve(id);
