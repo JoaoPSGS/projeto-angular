@@ -52,7 +52,7 @@ export class MeuStorageService {
           for (let i=0; i<usuarios.length;i++){
             if (usuarios[i].id == usuario.id){
               usuarios.splice(i,1);
-              // usuarios[i] = usuario;
+              // usuarios[i] = usuario
               break;
             }
           }
