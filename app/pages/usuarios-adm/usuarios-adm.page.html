@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de Usuários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngFor="let usuario of listaDeUsuarios" >
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ID: {{usuario.id}}</ion-card-title>
+      <ion-card-title>Usuário: {{usuario.login}}</ion-card-title>
+      <ion-card-title>Email: {{usuario.email}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+
+</ion-content>

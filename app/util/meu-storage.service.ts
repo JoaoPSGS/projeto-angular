@@ -51,7 +51,7 @@ export class MeuStorageService {
         case "exclusao":
           for (let i=0; i<usuarios.length;i++){
             if (usuarios[i].id == usuario.id){
-              usuario.splice(i,1);
+              usuarios.splice(i,1);
               // usuarios[i] = usuario;
               break;
             }

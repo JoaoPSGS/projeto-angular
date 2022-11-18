@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Lista de Sugestões</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngFor="let sugestao of listaDeSugestoes; let i = index" >
+  <ion-card>
+    <ion-card-header>
+      <ion-fab style="font-size: 32px;" horizontal="end" (click)="excluir_sugestao(sugestao)"><ion-icon name="close-outline"></ion-icon></ion-fab>
+      <ion-card-title>ID: {{sugestao.id}}</ion-card-title>
+      <ion-card-title>Usuário: {{sugestao.usuario}}</ion-card-title>
+      <ion-card-title>Email: {{sugestao.comentario}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</div>
+  
+
+</ion-content>

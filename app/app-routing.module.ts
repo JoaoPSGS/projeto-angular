@@ -31,6 +31,18 @@ const routes: Routes = [
     path: 'home-adm',
     loadChildren: () => import('./pages/home-adm/home-adm.module').then( m => m.HomeAdmPageModule)
   },
+  {
+    path: 'sugestao',
+    loadChildren: () => import('./pages/sugestao/sugestao.module').then( m => m.SugestaoPageModule)
+  },
+  {
+    path: 'usuarios-adm',
+    loadChildren: () => import('./pages/usuarios-adm/usuarios-adm.module').then( m => m.UsuariosAdmPageModule)
+  },
+  {
+    path: 'sugestoes-adm',
+    loadChildren: () => import('./pages/sugestoes-adm/sugestoes-adm.module').then( m => m.SugestoesAdmPageModule)
+  },
 ];
 
 @NgModule({

@@ -21,6 +21,11 @@
   </ion-item>
 
   <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Email</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="Usuario.email" required></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
     <ion-label position="floating">Senha</ion-label>
     <ion-input class="ion-text-center" name="password" [type]="showPassword ? 'text' : 'password'"  [(ngModel)]="Usuario.senha" required></ion-input>
     <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
