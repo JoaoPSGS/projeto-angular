@@ -8,15 +8,57 @@
 </ion-header>
 
 <ion-content>
-<div *ngFor="let usuario of listaDeUsuarios" >
+<div *ngFor="let usuario of listaDeUsuarios; let i = index" >
   <ion-card>
     <ion-card-header>
+      <ion-fab style="font-size: 32px;" horizontal="end" (click)="excluir_usuario(usuario)"><ion-icon name="close-outline"></ion-icon></ion-fab>
+      <ion-fab style="font-size: 32px;" horizontal="end" vertical="bottom" id="open-modal" expand="block" (click)="alterar_usuario(true, i)"><ion-icon name="pencil-outline"></ion-icon></ion-fab>
       <ion-card-title>ID: {{usuario.id}}</ion-card-title>
       <ion-card-title>Usuário: {{usuario.login}}</ion-card-title>
       <ion-card-title>Email: {{usuario.email}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </div>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar color="cor-angular">
+        
+        <ion-title>Alterar</ion-title>
+        
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-header class="ion-text-center" style="margin-top: 100px;">
+        <ion-label class="label-el" lines="none">
+          Alterar Cadastro
+        </ion-label>
+        <ion-img src="../../../assets/icon/Angular.png"></ion-img>
+      </ion-header>
+    
+      <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+        <ion-label  position="floating">Usuário</ion-label>
+        <ion-input class="ion-text-center" [(ngModel)]="Usuarios.login" required></ion-input>
+      </ion-item>
+    
+      <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+        <ion-label  position="floating">Email</ion-label>
+        <ion-input class="ion-text-center" [(ngModel)]="Usuarios.email" required></ion-input>
+      </ion-item>
+    
+      <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input class="ion-text-center" [(ngModel)]="Usuarios.senha" name="password" required></ion-input>
+      </ion-item>
+    
+    </ion-content>
+    <ion-footer class="ion-text-center">
+      <ion-button color="danger" style="width: 47%;" size="large" (click)="cancel(false)">Cancel</ion-button>
+      <ion-button style="width: 47%;" size="large" (click)="confirm()">Confirm</ion-button>
+    </ion-footer>
+  </ng-template>
+</ion-modal>
   
 
 </ion-content>
