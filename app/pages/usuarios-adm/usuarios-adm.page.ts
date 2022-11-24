@@ -90,7 +90,6 @@ export class UsuariosAdmPage implements OnInit {
   }
 
   confirm() {
-    debugger
     this.Usuarios.acao = "alteracao"
     this.meustorage.SalvarUsuario("usuarios", this.Usuarios).then(() => {
       this.presentAlert("Usuário Atualizado!");

@@ -49,7 +49,6 @@ export class EditarCadastroPage implements OnInit {
   }
 
   ionViewDidEnter(){
-    debugger
     this.login = this.listaDeUsuarios[0].login;
   }
 

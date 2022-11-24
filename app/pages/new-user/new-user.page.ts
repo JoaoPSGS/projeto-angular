@@ -47,7 +47,6 @@ export class NewUserPage implements OnInit {
   }
 
   btn_cadastrar(){
-    debugger
     if(this.Usuario.login == null || this.Usuario.login == ""){
       this.presentAlert("Usuário Vazio");
       return;

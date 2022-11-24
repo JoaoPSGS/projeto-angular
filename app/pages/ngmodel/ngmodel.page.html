@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ngModel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Input Um</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="inputUm" required></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Input Dois</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="inputDois" required></ion-input>
+  </ion-item>
+
+
+  <ion-item style="margin-top: 70%; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Input Três</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="inputTres" required></ion-input>
+  </ion-item>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Input Três</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="inputTres" required></ion-input>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button  style="width: 99%;" (click)="enviar()" size="large">Enviar</ion-button>
+</ion-footer>

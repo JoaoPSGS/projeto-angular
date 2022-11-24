@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ngIf</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Input Img</ion-label>
+    <ion-input class="ion-text-center" [(ngModel)]="inputImg" required></ion-input>
+  </ion-item>
+
+  <ion-img *ngIf="inputImg == 'img'" style="margin-top: 25%;" src="../../../assets/icon/Angular.png"></ion-img>
+
+</ion-content>
+

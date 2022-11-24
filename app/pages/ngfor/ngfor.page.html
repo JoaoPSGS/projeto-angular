@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="cor-angular">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ngFor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item style="margin-top: 50px; margin-left: 75px; margin-right: 75px;">
+    <ion-label  position="floating">Quantidade Cards</ion-label>
+    <ion-input type="number" class="ion-text-center" [(ngModel)]="qtd_card" required></ion-input>
+  </ion-item>
+
+  
+  <div style="margin-top: 10%;" *ngFor="let card of listaDeCard" >
+    <ion-card>
+      <ion-card-title class="ion-text-center">{{card}}</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">Teste ngFor</ion-card-subtitle>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button size="large" expand="block" (click)="enviar()">Enviar</ion-button>
+</ion-footer>
+

@@ -36,7 +36,6 @@ export class MeuStorageService {
       switch(usuario.acao)
       {
         case "alteracao":
-          debugger
           for (let i=0; i<usuarios.length;i++){
             if (usuarios[i].id == usuario.id){
               delete usuario.acao;
@@ -46,7 +45,6 @@ export class MeuStorageService {
           }
           break;
         case "exclusao":
-          debugger
           for (let i=0; i<usuarios.length;i++){
             if (usuarios[i].id == usuario.id){
               usuarios.splice(i,1);

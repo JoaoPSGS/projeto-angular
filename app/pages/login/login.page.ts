@@ -29,9 +29,12 @@ export class LoginPage implements OnInit {
 
   
   ionViewDidEnter(){
+    this.login = "";
+    this.senha = "";
    this.meustorage.GetUsuarios("usuarios").then(usuarios => {
     this.listaDeUsuarios = usuarios;
    });
+
   }
 
   ion

@@ -43,6 +43,22 @@ const routes: Routes = [
     path: 'sugestoes-adm',
     loadChildren: () => import('./pages/sugestoes-adm/sugestoes-adm.module').then( m => m.SugestoesAdmPageModule)
   },
+  {
+    path: 'ngmodel',
+    loadChildren: () => import('./pages/ngmodel/ngmodel.module').then( m => m.NgmodelPageModule)
+  },
+  {
+    path: 'ngif',
+    loadChildren: () => import('./pages/ngif/ngif.module').then( m => m.NgifPageModule)
+  },
+  {
+    path: 'ngfor',
+    loadChildren: () => import('./pages/ngfor/ngfor.module').then( m => m.NgforPageModule)
+  },
+  {
+    path: 'variavel',
+    loadChildren: () => import('./pages/variavel/variavel.module').then( m => m.VariavelPageModule)
+  },
 ];
 
 @NgModule({
