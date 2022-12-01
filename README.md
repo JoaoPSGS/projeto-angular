@@ -1,4 +1,4 @@
-# :computer: Projeto Angular 
+# :computer: Projeto Aprendizagem Angular
 ### Programa mobile para ajudar com algumas utilidades do framework Angular
 
 ## 🛠️ Ferramentas Utilizadas
@@ -41,3 +41,28 @@
 * Para uma nova página, basta executar o comando: **_ionic generate page nomeDaPasta/nomeDaPagina_**
 * Para criar um novo service, execute: **_ionic generate service nomeDaPasta/nomeDoService_**
 
+## Modelo C4
+
+* Diagrama de Contexto
+
+O aplicativo será utilizado pelos usuários e o administrador, onde o usuário poderá utilizar o conteúdo do aplicativo e também fazer o envio de sugestões. Já o adminitrador, fará a gerência dos dados dos usuários e das sugestões recebidas, além de corrigir eventuais erros e atualizar o aplicativo.
+
+<img src="https://github.com/JoaoPSGS/projeto-angular/blob/main/assets/c4/C4%20Contexto.png">
+
+* Diagrama de Container
+
+No diagrama container, o usuário acessa a aplicação mobile, que têm função de armazenar os dados de cadastro e login no banco de dados. Igualmente acontece para o administrador, que têm acesso a um conteúdo a parte, que nele é armazenado os dados dos usuários e as sugestões, que podem ser modificadas realizando a comunicação com o banco de dados.
+
+<img src="https://github.com/JoaoPSGS/projeto-angular/blob/main/assets/c4/C4%20Container.png">
+
+* Diagrama de Componentes
+
+A aplicação se inicia no "Login Controller", que pode te direcionar para o "Cadastro Controller" (que têm função de realizar um novo cadastro, fazendo isso enviando os dados ao "DataBase Controller" que se comunica com o "DataBase". Outra direção após o login é comunicar-se com o "DataBase Controller", que vai realizar a autenticação para saber qual dos dois próximo caminhos o utilizador será redirecionado. Um caminho é o "Home Controller", que pode te direcionar para a "Pages Controller" (te direciona para as páginas que possuem o conteúdo do aplicativo) ou para o "Comentarios Controller" (que te leva à páginas de envio de sugestões, lembrando que este componente se comunica com o "DataBase Controller"). Outro caminho é seguir para o "Home Adm Controller", que possui opções para seguir para "Comentarios Controller" e "Usuarios Controller", que são os componentes responsáveis por realizar o gerenciamento dos dados do aplicativo, além disso, os dois componente se comunicam com o "DataBase Controller".
+
+<img src="https://github.com/JoaoPSGS/projeto-angular/blob/main/assets/c4/C4%20Componentes.png">
+
+* Diagrama de Casos de Uso
+
+Diagrama indica que o usuário pode realizar cadastro e login. Após o login, ele terá acesso ao conteúdo do aplicativo, bem como a opção de enviar sugestões. No caso do administrador, ele poderá fazer o gerenciamento dos dados e das sugestões, ou seja, ele terá acesso aos dados dos usuários e as sugestões enviadas por eles, podendo fazer as operações de CRUD necessárias.
+
+<img src="https://github.com/JoaoPSGS/projeto-angular/blob/main/assets/c4/Caso%20de%20Uso.png">
